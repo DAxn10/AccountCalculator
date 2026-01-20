@@ -36,7 +36,7 @@ input {
 button {
   width: 100%;
   padding: 12px;
-  margin-top: 20px;
+  margin-top: 15px;
   background: #007bff;
   color: #fff;
   border: none;
@@ -47,6 +47,14 @@ button {
 
 button:hover {
   background: #0056b3;
+}
+
+.clear-btn {
+  background: #dc3545;
+}
+
+.clear-btn:hover {
+  background: #b52a37;
 }
 
 #result {

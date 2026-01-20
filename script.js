@@ -3,7 +3,7 @@ function safeInt(id) {
   let v = parseInt(el.value, 10);
 
   if (isNaN(v) || v < 1) {
-    el.value = 0; // show 0 in box if blank/invalid
+    el.value = 0; // blank / invalid / negative → 0
     return 0;
   }
   return v;
@@ -12,9 +12,10 @@ function safeInt(id) {
 function calculate() {
   let csEl = document.getElementById("cs");
   let cs = parseInt(csEl.value, 10);
+
   if (isNaN(cs)) {
     cs = 0;
-    csEl.value = 0; // show 0 if blank/invalid
+    csEl.value = 0;
   }
 
   let epicLow = safeInt("epicLow");
@@ -52,8 +53,32 @@ function calculate() {
     (ronaldo * 600) +
     (messi * 800) +
     (bestLow * 400) +
-    (bestHigh * 600); // 🔧 change when you set BestPlayer(108) price
+    (bestHigh * 0); // 🔧 change if you set BestPlayer(108) price
 
   document.getElementById("result").innerText =
     "Total ID Price: Rs " + price;
+}
+
+function clearAll() {
+  const ids = [
+    "cs",
+    "epicLow",
+    "epicHigh",
+    "epicTop",
+    "normal103",
+    "normal102",
+    "manager",
+    "ronaldo",
+    "messi",
+    "bestLow",
+    "bestHigh"
+  ];
+
+  ids.forEach(id => {
+    let el = document.getElementById(id);
+    if (el) el.value = 0;
+  });
+
+  document.getElementById("result").innerText =
+    "Total ID Price: Rs 0";
 }
