@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eFootball ID Price Calculator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>eFootball ID Price Calculator</h2>
+
+    <label>Collective Strength:</label>
+    <input type="number" id="cs" placeholder="e.g. 3200">
+
+    <label>Epic Cards (103–105):</label>
+    <input type="number" id="epicLow" placeholder="e.g. 3">
+
+    <label>Epic Cards (106–107):</label>
+    <input type="number" id="epicHigh" placeholder="e.g. 2">
+
+    <label>Epic Cards (108–109):</label>
+    <input type="number" id="epicTop" placeholder="e.g. 1">
+
+    <label>Normal Players (103–105) – per 2:</label>
+    <input type="number" id="normal103" placeholder="e.g. 4">
+
+    <label>Normal Players (102) – per 2:</label>
+    <input type="number" id="normal102" placeholder="e.g. 2">
+
+    <label>Manager Boosters:</label>
+    <input type="number" id="manager" placeholder="e.g. 1">
+
+    <label>Ronaldo (107):</label>
+    <input type="number" id="ronaldo" placeholder="e.g. 1">
+
+    <label>Leo Messi (110):</label>
+    <input type="number" id="messi" placeholder="e.g. 1">
+
+    <label>BestPlayer (106–107):</label>
+    <input type="number" id="bestLow" placeholder="e.g. 1">
+
+    <label>BestPlayer (108):</label>
+    <input type="number" id="bestHigh" placeholder="e.g. 3">
+
+    <button onclick="calculate()">Calculate Price</button>
+
+    <div id="result">Total ID Price: Rs 0</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
